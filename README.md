@@ -3,5 +3,5 @@
 </p>
 
 <p align="center">
-  <span style="font-size: 4em; font-weight: bold;">Minecraft2Arduino</span>
+  <strong><span style="font-size: 2.5em;">Minecraft2Arduino</span></strong>
 </p>
