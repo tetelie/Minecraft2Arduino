@@ -64,6 +64,7 @@ public class Minecraft2ArduinoCommand implements CommandExecutor {
                             for (Map.Entry<Position, String> entry : Minecraft2Arduino.getInstance().getBlock().entrySet()) {
                                 {
                                     if (entry.getValue().equals(args[1])) {
+                                        Minecraft2Arduino.getInstance().saveConfig.set("save."+args[1], null);
                                         Minecraft2Arduino.getInstance().getBlock().put(entry.getKey(), args[2]);
                                         player.sendMessage(Minecraft2Arduino.getInstance().prefix+"Successfully renamed "+ args[1] + " to " + args[2] + "!");
                                         return true;
