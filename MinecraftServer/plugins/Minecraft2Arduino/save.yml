@@ -1,0 +1,97 @@
+save:
+  grass:
+    position:
+      world: world
+      x: 174
+      y: 63
+      z: 195
+  sand1:
+    position:
+      world: world
+      x: 165
+      y: 63
+      z: 184
+  sand:
+    position:
+      world: world
+      x: 171
+      y: 63
+      z: 185
+  sand2:
+    position:
+      world: world
+      x: 163
+      y: 63
+      z: 183
+  sand3:
+    position:
+      world: world
+      x: 162
+      y: 63
+      z: 183
+  sand4:
+    position:
+      world: world
+      x: 161
+      y: 63
+      z: 183
+  long_grass:
+    position:
+      world: world
+      x: 173
+      y: 64
+      z: 195
+  log:
+    position:
+      world: world
+      x: 164
+      y: 65
+      z: 201
+  leaves:
+    position:
+      world: world
+      x: 181
+      y: 65
+      z: 199
+  log1:
+    position:
+      world: world
+      x: 148
+      y: 63
+      z: 220
+  stone:
+    position:
+      world: world
+      x: 138
+      y: 66
+      z: 248
+  grass1:
+    position:
+      world: world
+      x: 138
+      y: 66
+      z: 247
+  air:
+    position:
+      world: world
+      x: 169
+      y: 63
+      z: 187
+  wood:
+    position:
+      world: world
+      x: 184
+      y: 64
+      z: 192
+  jus2citron:
+    position:
+      world: world
+      x: 180
+      y: 64
+      z: 194
+  led:
+    position:
+      world: world
+      x: 175
+      y: 65
+      z: 183
