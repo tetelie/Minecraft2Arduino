@@ -28,6 +28,7 @@ public class Minecraft2ArduinoCommand implements CommandExecutor {
                 {
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a §7#Give you register item");
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a debug §7#Toggle debug mode");
+                    player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a list §7#Show block list");
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a remove <name> §7# Remove block from name");
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a rename <old_name> <new_name> §7# Rename block name");
                     return true;
@@ -41,6 +42,23 @@ public class Minecraft2ArduinoCommand implements CommandExecutor {
                         Minecraft2Arduino.getInstance().getDebug().add(player.getUniqueId());
                         player.sendMessage(Minecraft2Arduino.getInstance().prefix + "You entered debug mode.");
                     }
+                    return true;
+                }else if(args[0].equals("list"))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(Minecraft2Arduino.getInstance().prefix);
+                    for(int i = 0; i < Minecraft2Arduino.getInstance().getBlock().size(); i++)
+                    {
+                       sb.append(Minecraft2Arduino.getInstance().getBlock().values().toArray()[i]);
+                       if(i == Minecraft2Arduino.getInstance().getBlock().size())
+                       {
+                           sb.append(".");
+                       }else
+                       {
+                           sb.append(", ");
+                       }
+                    }
+                    player.sendMessage(sb.toString());
                     return true;
                 }
             } else if(args.length == 2)
