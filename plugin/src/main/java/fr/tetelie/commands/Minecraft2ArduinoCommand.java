@@ -2,11 +2,18 @@ package fr.tetelie.commands;
 
 import fr.tetelie.Minecraft2Arduino;
 import fr.tetelie.utils.Position;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 public class Minecraft2ArduinoCommand implements CommandExecutor {
@@ -28,6 +35,7 @@ public class Minecraft2ArduinoCommand implements CommandExecutor {
                 {
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a §7#Give you register item");
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a debug §7#Toggle debug mode");
+                    player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a gui §7#Open block gui");
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a list §7#Show block list");
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a remove <name> §7# Remove block from name");
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "/m2a rename <old_name> <new_name> §7# Rename block name");
@@ -59,6 +67,26 @@ public class Minecraft2ArduinoCommand implements CommandExecutor {
                        }
                     }
                     player.sendMessage(sb.toString());
+                    return true;
+                }else if(args[0].equals("gui"))
+                {
+                    Inventory gui = Bukkit.createInventory(null, 9*6, Minecraft2Arduino.getInstance().prefix+"GUI");
+                    for(Map.Entry<Position, String> entry : Minecraft2Arduino.getInstance().getBlock().entrySet())
+                    {
+                        Material material = Bukkit.getWorld(entry.getKey().getWorld()).getBlockData(entry.getKey().getX(), entry.getKey().getY(), entry.getKey().getZ()).getMaterial();
+                        ItemStack item = new ItemStack(material == Material.AIR ? Material.PAPER : material);
+                        ItemMeta meta = item.getItemMeta();
+
+                        meta.setItemName("§9"+entry.getValue());
+                        meta.setLore(Arrays.asList("§e"+entry.getKey(), "§7Click to teleport"));
+                        item.setItemMeta(meta);
+
+                        gui.addItem(item);
+
+                    }
+
+                    player.openInventory(gui);
+
                     return true;
                 }
             } else if(args.length == 2)

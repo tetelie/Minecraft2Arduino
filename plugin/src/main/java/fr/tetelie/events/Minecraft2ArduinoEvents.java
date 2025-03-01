@@ -2,11 +2,17 @@ package fr.tetelie.events;
 
 import fr.tetelie.Minecraft2Arduino;
 import fr.tetelie.utils.Position;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.inventory.InventoryAction;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+
+import java.util.Map;
 
 public class Minecraft2ArduinoEvents implements Listener {
 
@@ -63,6 +69,29 @@ public class Minecraft2ArduinoEvents implements Listener {
             }
 
         }
+    }
+
+    @EventHandler
+    public void onInvClick(InventoryClickEvent e)
+    {
+        Player player = (Player) e.getWhoClicked();
+        if(e.getView().getTitle().equals(Minecraft2Arduino.getInstance().prefix+"GUI")){
+            e.setCancelled(true);
+            String name = e.getCurrentItem().getItemMeta().getItemName().replaceAll("§9", "");
+
+            for(Map.Entry<Position, String> entry : Minecraft2Arduino.getInstance().getBlock().entrySet())
+            {
+                if(entry.getValue().equals(name))
+                {
+                    player.teleport(new Location(Bukkit.getWorld(entry.getKey().getWorld()), entry.getKey().getX(), entry.getKey().getY()+2, entry.getKey().getZ(), player.getLocation().getPitch(), player.getLocation().getYaw()));
+                    player.sendMessage(Minecraft2Arduino.getInstance().prefix+"You have been teleported to §9" + name);
+                    return;
+                }
+            }
+
+
+        }
+
     }
 
 }
