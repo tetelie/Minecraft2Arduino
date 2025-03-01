@@ -11,9 +11,12 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.java_websocket.client.WebSocketClient;
+import org.java_websocket.handshake.ServerHandshake;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.util.*;
 
 public class Minecraft2Arduino extends JavaPlugin {
@@ -31,8 +34,17 @@ public class Minecraft2Arduino extends JavaPlugin {
     public File saveFile;
     public YamlConfiguration saveConfig;
 
+    public File socketFile;
+    public YamlConfiguration socketConfig;
+    private String ip;
+    private String port;
+
+    public WebSocketClient webSocketClient;
+    public boolean isConnected = false;
+
     @Override
     public void onEnable() {
+        super.onEnable();
         instance = this;
         registerResources();
         registerFiles();
@@ -40,7 +52,8 @@ public class Minecraft2Arduino extends JavaPlugin {
         reigsterToolItem();
         registerCommands();
         registerEvents();
-        super.onEnable();
+        registerIpAndPort();
+        connectWebSocket();
     }
 
     @Override
@@ -76,9 +89,6 @@ public class Minecraft2Arduino extends JavaPlugin {
                         continue;
                     }
 
-                    System.out.println(cs2);
-                    System.out.println(cs2.getName());
-
                     String world = saveConfig.getString("save."+cs2.getName()+".position.world");
                     int x = saveConfig.getInt("save."+cs2.getName()+".position.x");
                     int y = saveConfig.getInt("save."+cs2.getName()+".position.y");
@@ -101,11 +111,15 @@ public class Minecraft2Arduino extends JavaPlugin {
 
     private void registerResources() {
         saveResource("save.yml", false);
+        saveResource("socket.yml", false);
     }
 
     private void registerFiles() {
         saveFile = new File(getDataFolder() + "/save.yml");
         saveConfig = YamlConfiguration.loadConfiguration(saveFile);
+
+        socketFile = new File(getDataFolder()+"/socket.yml");
+        socketConfig = YamlConfiguration.loadConfiguration(socketFile);
     }
 
 
@@ -182,6 +196,11 @@ public class Minecraft2Arduino extends JavaPlugin {
         }
     }
 
+    private void registerIpAndPort()
+    {
+        ip = socketConfig.getString("ip");
+        port = socketConfig.getString("port");
+    }
 
     private String incrementString(String str) {
         String base = str.replaceAll("\\d+$", ""); // Supprime les chiffres à la fin
@@ -194,4 +213,47 @@ public class Minecraft2Arduino extends JavaPlugin {
     public List<UUID> getDebug() {
         return debug;
     }
+
+
+    private void connectWebSocket() {
+        try {
+            this.getServer().getConsoleSender().sendMessage(prefix + "Trying to connect to " + ip + ":"+port);
+            webSocketClient = new WebSocketClient(new URI("ws://"+ip+":"+port)) { // Remplace par l'IP de l'ESP32
+                @Override
+                public void onOpen(ServerHandshake handshake) {
+                    isConnected = true;
+                    getLogger().info("Connecté au WebSocket !");
+                }
+
+                @Override
+                public void onMessage(String message) {
+                    getLogger().info("Message reçu : " + message);
+                }
+
+                @Override
+                public void onClose(int code, String reason, boolean remote) {
+                    isConnected = false;
+                    getLogger().info("Déconnecté du WebSocket !");
+                }
+
+                @Override
+                public void onError(Exception ex) {
+                    isConnected = false;
+                    getLogger().severe("Erreur WebSocket : " + ex.getMessage());
+                }
+            };
+            webSocketClient.connect();
+        } catch (Exception e) {
+            getLogger().severe("Erreur de connexion WebSocket : " + e.getMessage());
+        }
+    }
+
+    public void sendMessage(String block)
+    {
+
+        if(isConnected)webSocketClient.send(block);
+
+    }
+
+
 }

@@ -59,6 +59,8 @@ public class Minecraft2ArduinoEvents implements Listener {
             Position pos = new Position(e.getClickedBlock().getLocation());
             if(Minecraft2Arduino.getInstance().getBlock().containsKey(pos))
             {
+                Minecraft2Arduino.getInstance().sendMessage(Minecraft2Arduino.getInstance().getBlock().get(pos));
+
                 if(Minecraft2Arduino.getInstance().getDebug().contains(player.getUniqueId()))
                 {
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix+"§7[Debug] §e" + Minecraft2Arduino.getInstance().getBlock().get(pos) + " interacted.");
