@@ -3,6 +3,8 @@
 </p>
 <h1>Minecraft2Arduino</h1>
 
+Minecraft2Arduino is a project that aims to perform actions with Arduino through interaction in minecraft
+
 <h2>Architecture</h2>
 <p align="center">
   <img src="doc/architecture.png" />
