@@ -28,7 +28,7 @@ The system consists of three main components: <br>
 
 # Arduino Side
 📂 Code Location: [Microcontroller](./scripts/script.sh)
-<br>
+<br><br>
 The Arduino connects to the gateway using WebSockets and processes incoming messages to perform actions in the real world.
 
 Libraries Used:
