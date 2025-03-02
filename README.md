@@ -71,4 +71,9 @@ Libraries Used:
 
 ```/m2a rename <old_name> <new_name>``` Renames a block.
 
+### Config files
+
+```save.yml``` list of registred blocks
+```socket.yml``` socket connexion informations (ip and port)
+
 
