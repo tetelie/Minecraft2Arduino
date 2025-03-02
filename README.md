@@ -84,8 +84,8 @@ For my example I use an esp32 for the microcontroller, and I host the minecraft 
 You can found all the files here:
 
 - [MinecraftServer](./MinecraftServer)
-- [Gateway Server File](./Plugin)
-- [ESP32 Code](./Plugin)
+- [Gateway Server File](./WebSocketGateway/websocker-server.js)
+- [ESP32 Code](./Microcontroller/esp32_test.ino)
 
 wiring scheme: 
 <p align="center">
