@@ -2,19 +2,19 @@
   <img src="doc/m2a_logo_txt.png" width="300" height="300" />
 </p>
 
-# 📌 Description
+# Description
 
 Minecraft2Arduino is a project that enables interactions between Minecraft and Arduino, allowing actions in the real world based on in-game events. Think of it as a direct portal between Minecraft and reality!
 
 
 # Summary
-- Functioning
-  - Global Architecture
-  - Ardiuno Side
-  - Gateway Side
-  - Minecraft Side
+
+- Global Architecture
+- Arduino Side
+- Gateway Side
+- Minecraft Side
 - Documentation
-- Setup example
+🚀 Setup Example
 
 # Fonctioning
 
