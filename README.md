@@ -145,6 +145,13 @@ wire your esp32 like that:
   <img src="doc/wiring.png" />
 </p>
 
+- open ```test_esp32.ino``` file
+
+- change wifi informations
+
+- upload the ```test_esp32.ino``` programm to your esp32
+
+
 
 
 
