@@ -126,6 +126,14 @@ Move the MinecraftServer file where you want (also on my VPS for me)
 
 - right click on the block you want (lever for me)
 
+- in my example I rename it 'led' with ```/m2a rename lever led```
+
+- edit ```socket.yml``` to put the ip and port (I use my VPS ip and the 8080 port)
+
+- save the file
+
+- restart the server
+
 
 
 
