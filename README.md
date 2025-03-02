@@ -51,8 +51,8 @@ Technology Stack:
 A Minecraft plugin that captures player interactions and transmits relevant data to the gateway.
 
 Libraries Used:
-- Spigot-API (to interact with Minecraft server events)
-- Socket (to communicate with the gateway)
+- ```Spigot-API``` (to interact with Minecraft server events)
+- ```Socket``` (to communicate with the gateway)
 
 # Documentation
 
@@ -146,6 +146,8 @@ wire your esp32 like that:
 </p>
 
 - open ```test_esp32.ino``` file
+
+- install libraries
 
 - change wifi informations
 
