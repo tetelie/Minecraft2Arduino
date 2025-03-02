@@ -105,8 +105,8 @@ wiring scheme:
 You need to install
 
 
-```node```
-```npm```
+- ```node```
+- ```npm```
 
 
 
