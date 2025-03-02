@@ -159,9 +159,11 @@ Go on your server and click on the lever.
 
 Here is a video of my setup: 
 
+<p align="center">
 <a href="https://youtube.com/shorts/bxLiSwCMI2g?si=RsrDmeEY2oU_znCO">
-  <img src="./doc/miniature.png" width="400">
+  <img src="./doc/miniature.png" width="200">
 </a>
+</p>
 
 
 
