@@ -13,7 +13,7 @@ Minecraft2Arduino is a project that aims to perform actions with Arduino through
   - Gateway Side
   - Minecraft Side
 - Documentation
-- Setup
+- Setup example
 
 # Fonctioning
 
@@ -21,3 +21,8 @@ Minecraft2Arduino is a project that aims to perform actions with Arduino through
 <p align="center">
   <img src="doc/architecture.png" />
 </p>
+
+## Arduino Side
+You can found the associated folder here : [Microcontroller](./scripts/script.sh)
+
+
