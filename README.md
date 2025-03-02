@@ -61,19 +61,14 @@ Libraries Used:
 
 ```/m2a``` Gives you the registeration item.
 
-```/m2a debug```
-- Toggles debug mode.
+```/m2a debug```Toggles debug mode.
 
-```/m2a gui```
-- Opens the block management GUI.
+```/m2a gui```Opens the block management GUI.
 
-```/m2a list```
-- Displays all registered blocks.
+```/m2a list```Displays all registered blocks.
 
-```/m2a remove <name>```
-- Removes a block by its name.
+```/m2a remove <name>```Removes a block by its name.
 
-```/m2a rename <old_name> <new_name>```
-- Renames a block.
+```/m2a rename <old_name> <new_name>```Renames a block.
 
 
