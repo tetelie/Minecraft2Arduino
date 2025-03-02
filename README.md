@@ -60,21 +60,21 @@ Libraries Used:
 Available Commands
 
 /m2a
-Gives you the registered item.
+Gives you the registeration item.
 
-/m2a debug
+/m2a debug <br>
 Toggles debug mode.
 
-/m2a gui
+/m2a gui <br>
 Opens the block management GUI.
 
-/m2a list
+/m2a list <br>
 Displays all registered blocks.
 
-/m2a remove <name>
+/m2a remove <name> <br>
 Removes a block by its name.
 
-/m2a rename <old_name> <new_name>
+/m2a rename <old_name> <new_name> <br>
 Renames a block.
 
 
