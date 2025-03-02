@@ -77,6 +77,14 @@ Libraries Used:
 
 ```socket.yml``` socket connexion informations (ip and port)
 
+## Gateway
+
+Default port : ```8080```
+
+## Microcontroller
+
+Default port : ```8080```
+
 # Setup Example 🚀
 
 For my example I use an esp32 for the microcontroller, and I host the minecraft server and the gateway on a VPS. 
