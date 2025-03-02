@@ -116,6 +116,11 @@ start with ```node websocket-server.js```
 
 ## Step 2 : Setup Minecraft Server
 
+You need to install
+
+
+- ```java```
+
 Move the MinecraftServer file where you want (also on my VPS for me)
 
 - start it with ```sh start.sh```
