@@ -153,6 +153,12 @@ wire your esp32 like that:
 
 - upload the ```test_esp32.ino``` programm to your esp32
 
+## Step 3 : Test it !
+
+Go on your server and click on the lever.
+
+here is a video of my setup: 
+
 
 
 
