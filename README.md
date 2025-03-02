@@ -92,6 +92,14 @@ wiring scheme:
   <img src="doc/wiring.png" />
 </p>
 
+## Step 1 : Setup the Gateway
+
+You need to install
+```node``` list of registred blocks
+
+```npm``` socket connexion informations (ip and port)
+
+
 
 
 
