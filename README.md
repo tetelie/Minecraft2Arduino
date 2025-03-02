@@ -27,7 +27,7 @@ The system consists of three main components: <br>
 </p>
 
 # Arduino Side
-📂 Code Location: [Microcontroller](./scripts/script.sh)
+📂 Code Location: [Microcontroller](./Microcontroller)
 <br><br>
 The Arduino connects to the gateway using WebSockets and processes incoming messages to perform actions in the real world.
 
@@ -37,7 +37,7 @@ Libraries Used:
 - string.h (for handling strings)
 
 # Gateway Side
-📂 Code Location: [WebSocketGateway](./scripts/script.sh)
+📂 Code Location: [WebSocketGateway](./WebSocketGateway)
 <br><br>
 The gateway is a WebSocket server that facilitates communication between Arduino and Minecraft.
 
@@ -46,7 +46,7 @@ Technology Stack:
 - ws package (for WebSocket handling)
 
 # Minecraft Side
-📂 Code Location: [Plugin](./scripts/script.sh)
+📂 Code Location: [Plugin](./Plugin)
 <br><br>
 A Minecraft plugin that captures player interactions and transmits relevant data to the gateway.
 
