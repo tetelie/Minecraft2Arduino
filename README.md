@@ -157,10 +157,11 @@ wire your esp32 like that:
 
 Go on your server and click on the lever.
 
-here is a video of my setup: 
+Here is a video of my setup: 
 
-[![Watch the video](./doc/miniature.png)](https://youtube.com/shorts/bxLiSwCMI2g?si=RsrDmeEY2oU_znCO)
-
+<a href="https://youtube.com/shorts/bxLiSwCMI2g?si=RsrDmeEY2oU_znCO">
+  <img src="./doc/miniature.png" width="400">
+</a>
 
 
 
