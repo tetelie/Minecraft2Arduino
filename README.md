@@ -109,6 +109,11 @@ You need to install
 - ```npm```
 
 
+Move the websocket-server.js file to the directory you want
+
+
+start with ```node websocket-server.js```
+
 
 
 
