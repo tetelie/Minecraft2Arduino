@@ -109,10 +109,23 @@ You need to install
 - ```npm```
 
 
-Move the websocket-server.js file to the directory you want
+Move the websocket-server.js file to the directory you want (on my VPS for me)
 
 
 start with ```node websocket-server.js```
+
+## Step 2 : Setup Minecraft Server
+
+Move the MinecraftServer file where you want (also on my VPS for me)
+
+- start it with ```sh start.sh```
+
+- connect to it
+
+- execute ```m2a``` to get registration item
+
+- right click on the block you want (lever for me)
+
 
 
 
