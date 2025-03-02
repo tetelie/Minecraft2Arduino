@@ -89,7 +89,7 @@ You can found all the files here:
 
 wiring scheme: 
 <p align="center">
-  <img src="doc/wiring" />
+  <img src="doc/wiring.png" />
 </p>
 
 
