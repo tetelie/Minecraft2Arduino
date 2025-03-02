@@ -46,12 +46,12 @@ Technology Stack:
 - ws package (for WebSocket handling)
 
 # Minecraft Side
-You can found the associated folder here : [Plugin](./scripts/script.sh)
-<br>
-A plugin which is a client socket relai messages from the player interaction to the gateway server
+📂 Code Location: [Plugin](./scripts/script.sh)
+<br><br>
+A Minecraft plugin that captures player interactions and transmits relevant data to the gateway.
 
-Library used:
-- Spigot-Api
-- Socket
+Libraries Used:
+- Spigot-API (to interact with Minecraft server events)
+- Socket (to communicate with the gateway)
 
 
