@@ -27,14 +27,14 @@ The system consists of three main components: <br>
 </p>
 
 # Arduino Side
-You can found the associated folder here : [Microcontroller](./scripts/script.sh)
+📂 Code Location: [Microcontroller](./scripts/script.sh)
 <br>
-Arduino connect to the gateway with websockets and handle message from it
+The Arduino connects to the gateway using WebSockets and processes incoming messages to perform actions in the real world.
 
-Library used : 
-- WiFi.h
-- ArduinoWebsockets.h
-- string.h
+Libraries Used:
+- WiFi.h (for network connectivity)
+- ArduinoWebsockets.h (to communicate via WebSockets)
+- string.h (for handling strings)
 
 # Gateway Side
 You can found the associated folder here : [WebSocketGateway](./scripts/script.sh)
