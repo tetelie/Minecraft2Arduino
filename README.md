@@ -59,8 +59,7 @@ Libraries Used:
 ## Minecraft plugin 
 ### Available Commands
 
-```/m2a```
-- Gives you the registeration item.
+```/m2a``` Gives you the registeration item.
 
 ```/m2a debug```
 - Toggles debug mode.
