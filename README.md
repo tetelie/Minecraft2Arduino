@@ -37,12 +37,13 @@ Libraries Used:
 - string.h (for handling strings)
 
 # Gateway Side
-You can found the associated folder here : [WebSocketGateway](./scripts/script.sh)
-<br>
-The Gateway is a web socket server relaying message between Arduino and Minecraft Server
+📂 Code Location: [WebSocketGateway](./scripts/script.sh)
+<br><br>
+The gateway is a WebSocket server that facilitates communication between Arduino and Minecraft.
 
-Technology used :
-- Node.js
+Technology Stack:
+- Node.js (for WebSocket server implementation)
+- ws package (for WebSocket handling)
 
 # Minecraft Side
 You can found the associated folder here : [Plugin](./scripts/script.sh)
