@@ -136,7 +136,7 @@ Move the MinecraftServer file where you want (also on my VPS for me)
 
 ## Step 3 : Setup ESP32
 
-You need
+You need:
 - esp32
 - ArduinoIDE
 
