@@ -92,6 +92,6 @@ save:
   led:
     position:
       world: world
-      x: 175
-      y: 65
-      z: 183
+      x: 116
+      y: 100
+      z: 223
