@@ -95,11 +95,6 @@ You can found all the files here:
 - [Gateway Server File](./WebSocketGateway/websocket-server.js)
 - [ESP32 Code](./Microcontroller/esp32_test.ino)
 
-wiring scheme: 
-<p align="center">
-  <img src="doc/wiring.png" />
-</p>
-
 ## Step 1 : Setup the Gateway
 
 You need to install
@@ -138,6 +133,17 @@ Move the MinecraftServer file where you want (also on my VPS for me)
 - save the file
 
 - restart the server
+
+## Step 3 : Setup ESP32
+
+You need
+- esp32
+- ArduinoIDE
+
+wire your esp32 like that:
+<p align="center">
+  <img src="doc/wiring.png" />
+</p>
 
 
 
