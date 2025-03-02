@@ -103,9 +103,10 @@ wiring scheme:
 ## Step 1 : Setup the Gateway
 
 You need to install
-```node``` list of registred blocks
 
-```npm``` socket connexion informations (ip and port)
+
+```node```
+```npm```
 
 
 
