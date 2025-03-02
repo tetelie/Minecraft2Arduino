@@ -14,7 +14,7 @@ Minecraft2Arduino is a project that enables interactions between Minecraft and A
 - Gateway Side
 - Minecraft Side
 - Documentation
-🚀 Setup Example
+- 🚀 Setup Example
 
 # Fonctioning
 
