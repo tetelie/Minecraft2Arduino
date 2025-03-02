@@ -59,6 +59,7 @@ Libraries Used:
 ## Minecraft plugin 
 Available Commands
 
+```
 /m2a <br>
 - Gives you the registeration item.
 
