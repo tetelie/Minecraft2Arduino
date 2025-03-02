@@ -159,7 +159,7 @@ Go on your server and click on the lever.
 
 here is a video of my setup: 
 
-
+[![Watch the video](./doc/miniature.png)](https://youtube.com/shorts/bxLiSwCMI2g?si=RsrDmeEY2oU_znCO)
 
 
 
