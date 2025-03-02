@@ -1,9 +1,9 @@
 <p align="center">
   <img src="doc/m2a_logo_txt.png" width="300" height="300" />
 </p>
-<h1>Description</h1>
+# 📌Description
 
-Minecraft2Arduino is a project that aims to perform actions with Arduino through interaction in minecraft. Some will say that it is the direct portal between minecraft and the real world.
+Minecraft2Arduino is a project that enables interactions between Minecraft and Arduino, allowing actions in the real world based on in-game events. Think of it as a direct portal between Minecraft and reality!
 
 
 # Summary
