@@ -59,22 +59,22 @@ Libraries Used:
 ## Minecraft plugin 
 Available Commands
 
-/m2a
-Gives you the registeration item.
+/m2a <br>
+- Gives you the registeration item.
 
 /m2a debug <br>
-Toggles debug mode.
+- Toggles debug mode.
 
 /m2a gui <br>
-Opens the block management GUI.
+- Opens the block management GUI.
 
 /m2a list <br>
-Displays all registered blocks.
+- Displays all registered blocks.
 
 /m2a remove <name> <br>
-Removes a block by its name.
+- Removes a block by its name.
 
 /m2a rename <old_name> <new_name> <br>
-Renames a block.
+- Renames a block.
 
 
