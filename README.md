@@ -24,6 +24,7 @@ Minecraft2Arduino is a project that aims to perform actions with Arduino through
 
 ## Arduino Side
 You can found the associated folder here : [Microcontroller](./scripts/script.sh)
+<br>
 Arduino connect to the gateway with websockets and handle message from it
 
 Library used : 
@@ -33,6 +34,7 @@ Library used :
 
 ## Gateway Side
 You can found the associated folder here : [WebSocketGateway](./scripts/script.sh)
+<br>
 The Gateway is a web socket server relaying message between Arduino and Minecraft Server
 
 Technology used :
@@ -40,6 +42,11 @@ Technology used :
 
 ## Minecraft Side
 You can found the associated folder here : [Plugin](./scripts/script.sh)
+<br>
 A plugin which is a client socket relai messages from the player interaction to the gateway server
+
+Library used:
+- Spigot-Api
+- Socket
 
 
