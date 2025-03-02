@@ -32,9 +32,9 @@ The system consists of three main components: <br>
 The Arduino connects to the gateway using WebSockets and processes incoming messages to perform actions in the real world.
 
 Libraries Used:
-- WiFi.h (for network connectivity)
-- ArduinoWebsockets.h (to communicate via WebSockets)
-- string.h (for handling strings)
+- ```WiFi.h``` (for network connectivity)
+- ```ArduinoWebsockets.h``` (to communicate via WebSockets)
+- ```string.h``` (for handling strings)
 
 # Gateway Side
 📂 Code Location: [WebSocketGateway](./WebSocketGateway)
@@ -42,8 +42,8 @@ Libraries Used:
 The gateway is a WebSocket server that facilitates communication between Arduino and Minecraft.
 
 Technology Stack:
-- Node.js (for WebSocket server implementation)
-- ws package (for WebSocket handling)
+- ```Node.js``` (for WebSocket server implementation)
+- ```ws package``` (for WebSocket handling)
 
 # Minecraft Side
 📂 Code Location: [Plugin](./Plugin)
