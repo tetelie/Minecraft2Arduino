@@ -77,4 +77,21 @@ Libraries Used:
 
 ```socket.yml``` socket connexion informations (ip and port)
 
+# Setup Example 🚀
+
+For my example I use an esp32 for the microcontroller, and I host the minecraft server and the gateway on a VPS. 
+
+You can found all the files here:
+
+- [MinecraftServer](./MinecraftServer)
+- [Gateway Server File](./Plugin)
+- [ESP32 Code](./Plugin)
+
+wiring scheme: 
+<p align="center">
+  <img src="doc/wiring" />
+</p>
+
+
+
 
