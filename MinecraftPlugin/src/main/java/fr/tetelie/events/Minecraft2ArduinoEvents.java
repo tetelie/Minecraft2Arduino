@@ -11,6 +11,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryAction;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.EquipmentSlot;
 
 import java.util.Map;
 
@@ -56,6 +57,9 @@ public class Minecraft2ArduinoEvents implements Listener {
             }
         }else if(e.getClickedBlock() != null)
         {
+            if (e.getHand() != EquipmentSlot.HAND) {
+                return; // Ignore les interactions avec la main secondaire
+            }
             Position pos = new Position(e.getClickedBlock().getLocation());
             if(Minecraft2Arduino.getInstance().getBlock().containsKey(pos))
             {
