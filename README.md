@@ -46,7 +46,7 @@ Technology Stack:
 - ```ws package``` (for WebSocket handling)
 
 # Minecraft Side
-📂 Code Location: [Plugin](./Plugin)
+📂 Code Location: [Plugin](./MinecraftPlugin)
 <br><br>
 A Minecraft plugin that captures player interactions and transmits relevant data to the gateway.
 
