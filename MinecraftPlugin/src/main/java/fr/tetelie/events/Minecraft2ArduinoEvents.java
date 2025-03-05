@@ -21,6 +21,7 @@ public class Minecraft2ArduinoEvents implements Listener {
     public void onClick(PlayerInteractEvent e)
     {
         Player player = e.getPlayer();
+        //player.sendMessage("iterract");
         if(e.getItem() != null && e.getItem().equals(Minecraft2Arduino.getInstance().getTool())) {
             if (e.getClickedBlock() != null) {
                 e.setCancelled(true);
@@ -55,9 +56,9 @@ public class Minecraft2ArduinoEvents implements Listener {
                     player.sendMessage(Minecraft2Arduino.getInstance().prefix + "Please interact with a block");
                 }
             }
-        }else if(e.getClickedBlock() != null)
+        }else if(e.getClickedBlock() != null || e.getAction() == Action.PHYSICAL)
         {
-            if (e.getHand() != EquipmentSlot.HAND) {
+            if (e.getClickedBlock() != null && e.getAction() != Action.PHYSICAL && e.getHand() != EquipmentSlot.HAND) {
                 return; // Ignore les interactions avec la main secondaire
             }
             Position pos = new Position(e.getClickedBlock().getLocation());
